@@ -15,7 +15,8 @@ class UnicodeMacro(models.Model):
 
     tags = models.ManyToManyField(
         Tag,
-        related_name='unicode_macros'
+        related_name='unicode_macros',
+        blank=True
     )
 
     def __str__(self):
