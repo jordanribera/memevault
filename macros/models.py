@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.html import format_html
 
 from memecore.models import Tag
 
@@ -21,3 +22,9 @@ class UnicodeMacro(models.Model):
 
     def __str__(self):
         return self.text
+
+    def safe_text(self):
+        return format_html(
+            '<span style="font-weight: normal;">{}</span>',
+            self.text
+        )
