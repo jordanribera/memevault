@@ -28,3 +28,5 @@ class UnicodeMacro(models.Model):
             '<span class="emoji-safe">{}</span>',
             self.text
         )
+
+    safe_text.short_description = 'Macro Text'
