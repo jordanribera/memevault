@@ -25,6 +25,6 @@ class UnicodeMacro(models.Model):
 
     def safe_text(self):
         return format_html(
-            '<span style="font-weight: normal;">{}</span>',
+            '<span class="emoji-safe">{}</span>',
             self.text
         )
