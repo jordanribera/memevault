@@ -11,7 +11,8 @@ class EmojiGlyph(models.Model):
 
     tags = models.ManyToManyField(
         Tag,
-        related_name='emoji_glyphs'
+        related_name='emoji_glyphs',
+        blank=True
     )
 
     def __str__(self):
